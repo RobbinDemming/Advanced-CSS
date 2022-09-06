@@ -1,0 +1,61 @@
+.pf-grid {
+    margin-top: 50px;
+    display: grid;
+    gap: 20px;
+    &__griditem {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        
+        &::before {
+            content:'';
+            position: absolute;
+            @include fullsize;
+            background-color: $pfgrid-main;
+        }
+        
+        & .img {
+            position: absolute;
+            @include fullsize;
+            object-fit: cover;
+            transition: all;
+            transition-duration: 300ms;
+        }
+
+        & .btn {
+            width: 100px;
+            position: absolute;
+            @include centered;
+            opacity: 0;
+            transition: all;
+            transition-duration: 300ms;
+        }
+
+        &:hover .btn {
+            opacity: 1;
+        }
+
+        &:hover .img {
+            opacity: 0;
+            transform: scale(1.1);
+        }
+
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .pf-grid {
+        grid-template-columns: repeat(2, 150px);
+    }    
+}
+
+@media only screen and (min-width: 1024px) {
+    .pf-grid {
+        grid-template-columns: repeat(3, 150px);
+    }
+    
+}

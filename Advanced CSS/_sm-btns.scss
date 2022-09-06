@@ -1,0 +1,51 @@
+.sm-btns {
+    margin-top: 50px;
+    width: 150px;
+    position: fixed;
+    right: -125px;
+    top: 0;
+    &__sm-blog {
+        padding: 5px;
+        padding-left: 3px;
+        background-color: $blog-clr;
+        border-top-left-radius: 5px;
+    }
+    &__sm-facebook {
+        padding: 5px;
+        background-color: $facebk-clr;
+    }
+    &__sm-twitter {
+        padding: 5px;
+        background-color: $twttr-clr;
+    }
+    &__sm-github {
+        padding: 5px;
+        background-color: $gthb-clr;
+    }
+    &__sm-linkedin {
+        padding: 5px;
+        background-color: $lnkdin-clr;
+        border-bottom-left-radius: 5px;
+    }
+
+    & .sm-wrap {
+        color: white;
+        position: relative;
+        width: 150px;
+        display: flex;
+        align-items: center;
+        transition: all;
+        transition-duration: 500ms;
+        &:hover {
+            transform: translateX(-100px);
+            border-radius: 5px;
+        }
+        & a {
+            font-size: 0.5em;
+            margin-left: 10px;
+            color: white;
+            text-decoration: underline;
+        }
+        
+    }
+}

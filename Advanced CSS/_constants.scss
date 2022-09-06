@@ -1,0 +1,18 @@
+$pfgrid-main: rgb(14, 14, 62);
+$pfgrid-sec: rgb(255, 255, 255);
+$blog-clr: #e17b77;
+$facebk-clr: #3b5998;
+$twttr-clr: #00aced;
+$gthb-clr: #333;
+$lnkdin-clr: #007bb6;
+
+@mixin fullsize {
+    width: 100%;
+    height: 100%;
+}
+
+@mixin centered {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

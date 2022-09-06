@@ -1,0 +1,57 @@
+.testimonial {
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: 350px 150px;
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 3px 3px 10px 3px #808080;
+
+    &__text {
+        padding: 40px;
+        font-size: 1.3em;
+        line-height: 1.5em;
+        color: #636363;
+        background-color: #fff;
+    }
+
+    &__footer {
+        background-color: #686de0;
+        position: relative;
+        & .pfwrap {
+            border-radius: 50%;
+            border: 5px solid white;
+            overflow: hidden;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%, -50%);
+                &__pfpic {
+                    @include fullsize;
+                    object-fit: cover;
+            }
+        }
+    }
+
+    &__info {
+        text-align: center;
+        line-height: 1.5em;
+        top: 70px;
+        position: relative;
+        & h3 {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 200;
+        }
+        & a {
+            font-weight: 100;
+            color: #d3d3d3;
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    
+}
